@@ -1,0 +1,325 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  text-align: left;
+
+  background-color: var(--color-primary-navy);
+  color: var(--color-secondary-white);
+}
+
+
+.header .header__title {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.002em;
+}
+
+.header .header__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.menu {
+  align-items: center;
+  text-align: center;
+}
+
+.menu__item {
+  background: var(--color-secondary-grey);
+  border-radius: 20px;
+}
+
+.menu__item--title {
+  padding: 16px 0;
+}
+
+.menu__icon {
+  margin: auto;
+  background: none;
+}
+
+.menu__rectangle {
+  border-radius: 14px;
+  margin: auto;
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+.menu__rectangle--first {
+  background-color: #373155;
+}
+
+.menu__rectangle--second {
+  background-color: #2C3455;
+}
+
+.menu__rectangle--third {
+  background-color: #274255;
+}
+
+.menu__rectangle--fourth {
+  background-color: #3D413F;
+}
+
+.menu__item--title {
+  font-weight: 500;
+}
+
+.menu__item--text {
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+@media screen and (min-width:1024px) {
+
+  .content {
+    padding: 152px 140px;
+    display: flex;
+  }
+
+  .header {
+    width: 90%;
+    margin-right: 10%;
+  }
+
+  .header .header__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+
+  .header__text,
+  .header__title {
+    width: 100%;
+    display: block;
+  }
+
+  .menu {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 31px;
+  }
+
+  .menu__item {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .menu__item--first,
+  .menu__item--second,
+  .menu__item--third,
+  .menu__item--fourth {
+    width: 45%;
+    height: auto;
+    padding: 24px 16px;
+
+  }
+
+  .menu__item--title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .menu__item--text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .menu__item--title,
+  .menu__item--text {
+    margin-bottom: 0;
+  }
+
+  .menu__item--first,
+  .menu__item--third {
+    margin-right: 24px;
+  }
+
+
+  .menu__rectangle {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  .menu__icon {
+    width: 28px;
+    height: 28px;
+    margin: auto auto;
+  }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+  .content {
+    padding: 247px 169px;
+  }
+
+  .header {
+    padding-bottom: 24px;
+  }
+
+
+  .header .header__text {
+    margin-top: 16px;
+  }
+
+  .header .header__title,
+  .header .header__text {
+    padding-bottom: 0;
+  }
+
+  .menu {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .menu__item {
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+  .menu__item--first,
+  .menu__item--second,
+  .menu__item--third,
+  .menu__item--fourth {
+    height: auto;
+
+    padding-left: 14px;
+    padding-right: 17px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+  }
+
+  .menu__item--text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .menu__item--title,
+  .menu__item--text {
+    margin: 0;
+  }
+
+  .menu__item--first,
+  .menu__item--third {
+    margin-right: 16px;
+  }
+
+
+  .menu__rectangle {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  .menu__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+
+}
+
+@media only screen and (max-width: 992px) {
+  .content {
+    padding: 25% 15%;
+  }
+  .menu__item--first,
+  .menu__item--third {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    padding: 20% 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .content {
+    padding: 16px;
+    padding-top: 48px;
+  }
+
+  .header {
+    padding-bottom: 32px;
+  }
+
+  .header .header__title,
+  .header .header__text,
+  .menu,
+  .menu__icon,
+  .menu__item--text,
+  .menu .menu__item .menu__rectangle {
+    padding: 0;
+  }
+
+  .header .header__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .header .header__text {
+    margin-top: 16px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .menu__item--first,
+  .menu__item--second,
+  .menu__item--third,
+  .menu__item--fourth,
+  .menu__item--title {
+    padding: 16px;
+  }
+
+  .menu__item--first,
+  .menu__item--second,
+  .menu__item--third,
+  .menu__item--fourth {
+    margin-bottom: 16px;
+    width: auto;
+    margin-right: 0;
+
+  }
+
+  .menu .menu__item .menu__rectangle {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: none;
+  }
+
+}

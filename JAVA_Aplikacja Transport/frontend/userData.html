@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>LandingPage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="padding: 2%;">
+    <h1>Moje konto</h1>
+    <form class="form-inline" style="width: 15%; display: inline-block;">
+        <div class="form-group-email mb-2 hidden" style="margin-top: 5%; display: none;" id="formEmail">
+            <label for="staticNewEmail2" style="color:dimgrey">Podaj nowy adres e-mail:</label>
+            <input type="email" id="staticNewEmail2" name="email" class="form-control" placeholder="Podaj e-mail"
+                required><br>
+            <button type="submit submitEmail" class="btn btn-primary mb-2" style="display: inline;">Zatwierdź</button>
+        </div>
+        <div class="form-group mb-2">
+            <label for="staticEmail2" style="color:dimgrey">Adres email:</label>
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email">
+        </div>
+        <button type="button" class="btn btn-outline-primary mb-2" style="display: inline;"
+            onclick="toggleFormEmail()">Zmień
+            <i class="fa fa-pencil" style="font-size:16px;"></i></button>
+
+
+    </form>
+
+    <form class="form-inline" style="width: 15%; margin: 2%; display: inline-block;">
+        <div class="form-group-username mb-2 hidden" style="display: none; margin-top: 5%;" id="formUsername">
+            <label for="staticNewUsername" style="color:dimgrey">Podaj nowy login:</label>
+            <input type="text" id="staticNewUsername" name="username" class="form-control" placeholder="Podaj login"
+                required><br>
+            <button type="submit submitUsername" class="btn btn-primary mb-2"
+                style="display: inline;">Zatwierdź</button>
+        </div>
+        <div class="form-group mb-2">
+            <label for="staticUsername" style="color:dimgrey">Nazwa użytkownika:</label>
+            <input type="text" readonly class="form-control-plaintext" id="staticUsername" value="jankowalski">
+        </div>
+        <button type="submit" class="btn btn-outline-primary mb-2" style="display: inline;"
+            onclick="toggleFormUsername()">Zmień <i class="fa fa-pencil" style="font-size:16px;"></i></button>
+
+    </form>
+
+    <form class="form-inline" style="width: 15%; margin: 2%; display: inline-block;">
+        <div class="form-group-password mb-2 hidden" style="display: none; margin-top: 5%;" id="formPassword">
+            <label for="staticNewPassword" style="color:dimgrey">Podaj nowe hasło:</label>
+            <input type="password" id="staticNewPassword" name="password" class="form-control" placeholder="Podaj hasło"
+                required><br>
+            <button type="submit submitPassword" class="btn btn-primary mb-2"
+                style="display: inline;">Zatwierdź</button>
+        </div>
+        <div class="form-group mb-2">
+            <label for="staticPassword" style="color:dimgrey">Hasło:</label>
+            <input type="password" readonly class="form-control-plaintext" id="staticPassword" value="123456">
+        </div>
+        <button type="submit" class="btn btn-outline-primary mb-2" style="display: inline;"
+            onclick="toggleFormPassword()">Zmień <i class="fa fa-pencil" style="font-size:16px;"></i></button>
+
+    </form>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+        <script src="js/userData.mjs"></script>
+    <script>
+        const formEmail = document.getElementById('formEmail');
+        const formUsername = document.getElementById('formUsername');
+        const formPassword = document.getElementById('formPassword');
+
+        function toggleFormEmail() {
+            if (formEmail.style.display === "none") {
+                formEmail.style.display = "block";
+            } else {
+                formEmail.style.display = "none";
+            }
+        }
+
+        function toggleFormUsername() {
+            if (formUsername.style.display === "none") {
+                formUsername.style.display = "block";
+            } else {
+                formUsername.style.display = "none";
+            }
+        }
+
+        function toggleFormPassword() {
+            if (formPassword.style.display === "none") {
+                formPassword.style.display = "block";
+            } else {
+                formPassword.style.display = "none";
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
